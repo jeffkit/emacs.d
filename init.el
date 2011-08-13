@@ -1,10 +1,18 @@
 ;; set environments
 (setenv "PATH" "/usr/local/bin:/opt/local/bin:/usr/bin:/bin:/usr/sbin:/sbin")
-(setenv "PYTHONPATH" "/opt/local/bin/python")
-(setenv "PYMACS_PYTHON" "/opt/local/bin/python")
+(setenv "PYTHONPATH" "/opt/local/bin/python") 
+(setenv "PYMACS_PYTHON" "/opt/local/bin/python") ;;为pymacs指定有效的python
 
 (add-to-list 'load-path
 	     "~/.emacs.d/plugins")
+
+;;show line number
+(line-number-mode t) ;; 在状态栏显示行
+(column-number-mode t) ;; 在状态栏显示列
+
+;; color theme
+(require 'color-theme)
+(color-theme-robin-hood)
 
 ;; package manager
 (require 'package)
