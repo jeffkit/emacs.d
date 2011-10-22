@@ -67,3 +67,8 @@
 (setq default-fill-column 79)
 (setq-default auto-fill-function 'do-auto-fill)
 
+;; lisp config
+(add-to-list 'load-path "~/.emacs.d/plugins/slime")
+(setq inferior-lisp-program "/usr/local/bin/sbcl") 
+(require 'slime-autoloads)
+(slime-setup '(slime-fancy))
