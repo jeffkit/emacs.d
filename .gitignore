@@ -4,5 +4,5 @@ auto-save-list
 places
 tramp
 .smex-items
-elpa/archives 
+elpa/archives/
 *.elc
