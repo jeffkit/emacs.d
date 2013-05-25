@@ -5,3 +5,4 @@ places
 tramp
 .smex-items
 elpa/archives 
+*.elc
