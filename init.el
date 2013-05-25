@@ -1,7 +1,9 @@
 ;; set environments
-(setenv "PATH" "/usr/local/bin:/opt/local/bin:/usr/bin:/bin:/usr/sbin:/sbin")
+(setenv "GOPATH" "/Users/jeff/projects/gocode")
+(setenv "PATH" "/usr/local/bin:/opt/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Users/jeff/projects/gocode/bin")
 (setenv "PYTHONPATH" "/opt/local/bin/python") 
 (setenv "PYMACS_PYTHON" "/opt/local/bin/python") ;;为pymacs指定有效的python
+
 
 (add-to-list 'load-path
 	     "~/.emacs.d/plugins")
@@ -89,14 +91,19 @@
  ;; If there is more than one, they won't work right.
  )
 
-
 (autoload 'markdown-mode "markdown-mode.el" "Major mode for editing Markdown files" t)
 (setq auto-mode-alist
       (cons '("\\.md" . markdown-mode) auto-mode-alist))
 
-
 (autoload 'graphviz-dot-mode "graphviz-dot-mode.el" "graphviz mode" t)
 (setq auto-mode-alist
       (cons '("\\.dot" . graphviz-dot-mode) auto-mode-alist))
+(require 'auto-complete-config)
+(require 'go-mode-load)
+(require 'go-autocomplete)
 
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/plugins/ac-dict")
+(ac-config-default)
 
+(setq default-tab-width 4)
+(setq tab-width 4)

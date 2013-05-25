@@ -6,3 +6,5 @@ tramp
 .smex-items
 elpa/archives/
 *.elc
+backups
+ac-comphist.dat
