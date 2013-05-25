@@ -132,7 +132,6 @@ Return nil if the ChangeLog file cannot be found."
 (setq slime-protocol-version
       (eval-when-compile (slime-changelog-date)))
 
-
 ;;;; Customize groups
 ;;
 ;;;;; slime
